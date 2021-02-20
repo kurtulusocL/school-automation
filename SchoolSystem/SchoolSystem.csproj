@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8137476-942E-42C1-ADC5-E3A90A060DC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SchoolSystem</RootNamespace>
+    <AssemblyName>SchoolSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AbsentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AbsentEdit.Designer.cs">
+      <DependentUpon>AbsentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AbsentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AbsentAdd.Designer.cs">
+      <DependentUpon>AbsentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AbsentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AbsentList.Designer.cs">
+      <DependentUpon>AbsentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClassTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClassTypeAdd.Designer.cs">
+      <DependentUpon>ClassTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayEdit.Designer.cs">
+      <DependentUpon>HolidayEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayAdd.Designer.cs">
+      <DependentUpon>HolidayAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayList.Designer.cs">
+      <DependentUpon>HolidayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LessonAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LessonAdd.Designer.cs">
+      <DependentUpon>LessonAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentAdd.Designer.cs">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClassTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClassTypeEdit.Designer.cs">
+      <DependentUpon>ClassTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClassTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClassTypeList.Designer.cs">
+      <DependentUpon>ClassTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LessonEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LessonEdit.Designer.cs">
+      <DependentUpon>LessonEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LessonList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LessonList.Designer.cs">
+      <DependentUpon>LessonList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.Designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentNoteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentNoteEdit.Designer.cs">
+      <DependentUpon>StudentNoteEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentNoteAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentNoteAdd.Designer.cs">
+      <DependentUpon>StudentNoteAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentNoteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentNoteList.Designer.cs">
+      <DependentUpon>StudentNoteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolEdit.Designer.cs">
+      <DependentUpon>TaskInSchoolEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolAdd.Designer.cs">
+      <DependentUpon>TaskInSchoolAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskInSchoolList.Designer.cs">
+      <DependentUpon>TaskInSchoolList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeacherEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeacherEdit.Designer.cs">
+      <DependentUpon>TeacherEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeacherAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeacherAdd.Designer.cs">
+      <DependentUpon>TeacherAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeacherList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeacherList.Designer.cs">
+      <DependentUpon>TeacherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkerEdit.Designer.cs">
+      <DependentUpon>WorkerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkerAdd.Designer.cs">
+      <DependentUpon>WorkerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkerList.Designer.cs">
+      <DependentUpon>WorkerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004220237055_init.cs" />
+    <Compile Include="Migrations\202004220237055_init.Designer.cs">
+      <DependentUpon>202004220237055_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BaseHome.cs" />
+    <Compile Include="Models\ClassType.cs" />
+    <Compile Include="Models\Holiday.cs" />
+    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentAbsent.cs" />
+    <Compile Include="Models\StudentNote.cs" />
+    <Compile Include="Models\TaskInSchool.cs" />
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AbsentEdit.resx">
+      <DependentUpon>AbsentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AbsentAdd.resx">
+      <DependentUpon>AbsentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AbsentList.resx">
+      <DependentUpon>AbsentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClassTypeEdit.resx">
+      <DependentUpon>ClassTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClassTypeAdd.resx">
+      <DependentUpon>ClassTypeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClassTypeList.resx">
+      <DependentUpon>ClassTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayEdit.resx">
+      <DependentUpon>HolidayEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayAdd.resx">
+      <DependentUpon>HolidayAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayList.resx">
+      <DependentUpon>HolidayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LessonEdit.resx">
+      <DependentUpon>LessonEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LessonAdd.resx">
+      <DependentUpon>LessonAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LessonList.resx">
+      <DependentUpon>LessonList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentEdit.resx">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentAdd.resx">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentNoteEdit.resx">
+      <DependentUpon>StudentNoteEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentNoteAdd.resx">
+      <DependentUpon>StudentNoteAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentNoteList.resx">
+      <DependentUpon>StudentNoteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskInSchoolEdit.resx">
+      <DependentUpon>TaskInSchoolEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskInSchoolAdd.resx">
+      <DependentUpon>TaskInSchoolAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskInSchoolList.resx">
+      <DependentUpon>TaskInSchoolList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherEdit.resx">
+      <DependentUpon>TeacherEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherAdd.resx">
+      <DependentUpon>TeacherAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherList.resx">
+      <DependentUpon>TeacherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkerEdit.resx">
+      <DependentUpon>WorkerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkerAdd.resx">
+      <DependentUpon>WorkerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkerList.resx">
+      <DependentUpon>WorkerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004220237055_init.resx">
+      <DependentUpon>202004220237055_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
